@@ -1,0 +1,44 @@
+<section class="projects-section">
+  <div class="container">
+    <div class="projects-header">
+      <p class="section-label">Portfolio</p>
+      <h2 class="section-title">Selected Projects</h2>
+    </div>
+
+    <div class="project-grid">
+      {% for project in site.data.projects %}
+      <article class="project-card">
+        {% if project.image %}
+        <div class="card-image">
+          <img src="{{ project.image | relative_url }}" alt="{{ project.title }}" loading="lazy">
+        </div>
+        {% else %}
+        <div class="card-visual">
+          <span class="initial">{{ project.title | slice: 0 }}</span>
+        </div>
+        {% endif %}
+
+        <div class="card-body">
+          <h3 class="card-title">{{ project.title }}</h3>
+          <p class="card-description">{{ project.description }}</p>
+
+          {% if project.tags.size > 0 %}
+          <div class="card-tags">
+            {% for tag in project.tags %}
+            <span class="tag">{{ tag }}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
+
+          {% if project.url %}
+          <a href="{{ project.url }}" class="card-link" target="_blank" rel="noopener">
+            View project
+            <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          {% endif %}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

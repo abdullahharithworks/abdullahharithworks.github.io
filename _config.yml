@@ -3,6 +3,7 @@ description: Personal projects and portfolio
 url: "https://abdullahharithworks.github.io"
 baseurl: ""
 
-theme: jekyll-theme-cayman
+plugins:
+  - jekyll-seo-tag
 
 markdown: kramdown

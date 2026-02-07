@@ -1,0 +1,33 @@
+- title: "Raytracer Engine"
+  description: "A GPU-accelerated ray tracing engine built from scratch. Supports reflections, refractions, soft shadows, and global illumination with real-time preview."
+  image: "/assets/images/raytracer.png"
+  tags:
+    - C++
+    - Vulkan
+    - Graphics
+  url: "https://github.com/abdullahharithworks/raytracer"
+
+- title: "Distributed Task Queue"
+  description: "Lightweight distributed task queue with automatic retries, dead-letter handling, and a live dashboard. Designed for high-throughput background job processing."
+  image: "/assets/images/taskqueue.png"
+  tags:
+    - Go
+    - Redis
+    - Distributed Systems
+  url: "https://github.com/abdullahharithworks/taskqueue"
+
+- title: "Markdown Note Sync"
+  description: "Cross-platform CLI tool that syncs Markdown notes between local directories and cloud storage with conflict resolution and encryption at rest."
+  tags:
+    - Rust
+    - CLI
+    - Encryption
+  url: "https://github.com/abdullahharithworks/notesync"
+
+- title: "Budget Tracker API"
+  description: "RESTful API for personal finance tracking with automatic bank transaction categorization using a fine-tuned classifier model."
+  tags:
+    - Python
+    - FastAPI
+    - Machine Learning
+  url: "https://github.com/abdullahharithworks/budget-api"
