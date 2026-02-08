@@ -1,8 +1,8 @@
-# Trident Fox - Company Website Plan
+# Amber Rook - Company Website Plan
 
 ## Context
 
-Trident Fox is a single-page company website deployed via GitHub Pages. Built with Jekyll, Tailwind CSS v4, and vanilla JavaScript, it showcases projects as the primary focus, company stats, founder profiles (secondary), and contact details.
+Amber Rook is a single-page company website deployed via GitHub Pages. Built with Jekyll, Tailwind CSS v4, and vanilla JavaScript, it showcases projects as the primary focus, company stats, founder profiles (secondary), and contact details.
 
 **Design direction**: Light theme, indigo-violet primary + warm coral accent, modern & inviting startup feel (not corporate). Moderate motion (scroll animations, counter animations, hover effects). Typography: Space Grotesk (headings) / DM Sans (body). CSS initials avatars for founders.
 
@@ -87,7 +87,7 @@ D:\Development\PersonalWebsite\
 ## Verification
 
 1. Run `bundle exec jekyll serve --livereload` locally
-2. Confirm all references say "Trident Fox" (no "AGN Technology" remnants)
+2. Confirm all references say "Amber Rook" (no "AGN Technology" remnants)
 3. Verify founder avatars show styled initials (KJ, YCW, AH) in colored circles
 4. Test all 4 breakpoints: 375px, 768px, 1024px, 1440px
 5. Verify smooth scroll navigates to correct sections with nav offset
@@ -96,4 +96,4 @@ D:\Development\PersonalWebsite\
 8. Test keyboard navigation (Tab through all interactive elements)
 9. Enable `prefers-reduced-motion: reduce` and verify no animations play
 10. Verify all hover states have smooth transitions and `cursor-pointer`
-11. Verify contact links point to tridentfox placeholders
+11. Verify contact links point to amberrook placeholders

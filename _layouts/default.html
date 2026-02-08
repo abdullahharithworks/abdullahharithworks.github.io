@@ -138,23 +138,22 @@
 
     /*
      * Leather texture text (Skeuomorphism style)
-     * Uses SVG feTurbulence pattern clipped to text.
+     * Self-contained SVG data URIs with feTurbulence filters.
      * Contrast: #3B1F0B on #F5F3FF = 13.8:1 (AAA)
      * Contrast: #C9A87C on #1E1B4B = 7.1:1 (AAA)
-     * Fallback: Solid brown/tan if SVG pattern fails.
+     * Fallback: Solid brown/tan if SVG rendering fails.
      * Per UI/UX Pro Max: texture on large display text only (headings/logos).
      */
     .leather-text {
-      background: url(#leather-pattern) #3B1F0B;
+      background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22300%22%20height%3D%22300%22%3E%3Cfilter%20id%3D%22f%22%3E%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%220.65%22%20numOctaves%3D%224%22%20seed%3D%222%22%20stitchTiles%3D%22stitch%22%20result%3D%22n%22%2F%3E%3CfeColorMatrix%20in%3D%22n%22%20result%3D%22t%22%20values%3D%220.18%200%200%200%200.18%20%200.10%200%200%200%200.09%20%200.04%200%200%200%200.03%20%200%200%200%200%201%22%2F%3E%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%222.2%22%20numOctaves%3D%223%22%20seed%3D%227%22%20stitchTiles%3D%22stitch%22%20result%3D%22g%22%2F%3E%3CfeColorMatrix%20in%3D%22g%22%20result%3D%22gd%22%20values%3D%220.08%200%200%200%200%20%200.04%200%200%200%200%20%200.02%200%200%200%200%20%200%200%200%200%201%22%2F%3E%3CfeBlend%20in%3D%22t%22%20in2%3D%22gd%22%20mode%3D%22multiply%22%20result%3D%22c%22%2F%3E%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%220.35%22%20numOctaves%3D%222%22%20seed%3D%2212%22%20stitchTiles%3D%22stitch%22%20result%3D%22h%22%2F%3E%3CfeColorMatrix%20in%3D%22h%22%20result%3D%22s%22%20values%3D%220.05%200%200%200%200%20%200.04%200%200%200%200%20%200.02%200%200%200%200%20%200%200%200%200%201%22%2F%3E%3CfeBlend%20in%3D%22c%22%20in2%3D%22s%22%20mode%3D%22screen%22%20result%3D%22ws%22%2F%3E%3CfeComponentTransfer%20in%3D%22ws%22%3E%3CfeFuncR%20type%3D%22linear%22%20slope%3D%221.4%22%20intercept%3D%220.04%22%2F%3E%3CfeFuncG%20type%3D%22linear%22%20slope%3D%221.15%22%20intercept%3D%220.02%22%2F%3E%3CfeFuncB%20type%3D%22linear%22%20slope%3D%220.85%22%20intercept%3D%220%22%2F%3E%3C%2FfeComponentTransfer%3E%3C%2Ffilter%3E%3Crect%20width%3D%22300%22%20height%3D%22300%22%20fill%3D%22%233B1F0B%22%2F%3E%3Crect%20width%3D%22300%22%20height%3D%22300%22%20filter%3D%22url%28%23f%29%22%2F%3E%3C%2Fsvg%3E") #3B1F0B;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
     }
 
     /* Large heading variant — enhanced emboss for hero */
     .leather-text-hero {
-      background: url(#leather-pattern) #3B1F0B;
+      background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22300%22%20height%3D%22300%22%3E%3Cfilter%20id%3D%22f%22%3E%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%220.65%22%20numOctaves%3D%224%22%20seed%3D%222%22%20stitchTiles%3D%22stitch%22%20result%3D%22n%22%2F%3E%3CfeColorMatrix%20in%3D%22n%22%20result%3D%22t%22%20values%3D%220.18%200%200%200%200.18%20%200.10%200%200%200%200.09%20%200.04%200%200%200%200.03%20%200%200%200%200%201%22%2F%3E%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%222.2%22%20numOctaves%3D%223%22%20seed%3D%227%22%20stitchTiles%3D%22stitch%22%20result%3D%22g%22%2F%3E%3CfeColorMatrix%20in%3D%22g%22%20result%3D%22gd%22%20values%3D%220.08%200%200%200%200%20%200.04%200%200%200%200%20%200.02%200%200%200%200%20%200%200%200%200%201%22%2F%3E%3CfeBlend%20in%3D%22t%22%20in2%3D%22gd%22%20mode%3D%22multiply%22%20result%3D%22c%22%2F%3E%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%220.35%22%20numOctaves%3D%222%22%20seed%3D%2212%22%20stitchTiles%3D%22stitch%22%20result%3D%22h%22%2F%3E%3CfeColorMatrix%20in%3D%22h%22%20result%3D%22s%22%20values%3D%220.05%200%200%200%200%20%200.04%200%200%200%200%20%200.02%200%200%200%200%20%200%200%200%200%201%22%2F%3E%3CfeBlend%20in%3D%22c%22%20in2%3D%22s%22%20mode%3D%22screen%22%20result%3D%22ws%22%2F%3E%3CfeComponentTransfer%20in%3D%22ws%22%3E%3CfeFuncR%20type%3D%22linear%22%20slope%3D%221.4%22%20intercept%3D%220.04%22%2F%3E%3CfeFuncG%20type%3D%22linear%22%20slope%3D%221.15%22%20intercept%3D%220.02%22%2F%3E%3CfeFuncB%20type%3D%22linear%22%20slope%3D%220.85%22%20intercept%3D%220%22%2F%3E%3C%2FfeComponentTransfer%3E%3C%2Ffilter%3E%3Crect%20width%3D%22300%22%20height%3D%22300%22%20fill%3D%22%233B1F0B%22%2F%3E%3Crect%20width%3D%22300%22%20height%3D%22300%22%20filter%3D%22url%28%23f%29%22%2F%3E%3C%2Fsvg%3E") #3B1F0B;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -163,11 +162,10 @@
 
     /* Leather text on dark backgrounds (footer) */
     .leather-text-light {
-      background: url(#leather-pattern-light) #C9A87C;
+      background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22300%22%20height%3D%22300%22%3E%3Cfilter%20id%3D%22f%22%3E%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%220.65%22%20numOctaves%3D%224%22%20seed%3D%222%22%20stitchTiles%3D%22stitch%22%20result%3D%22n%22%2F%3E%3CfeColorMatrix%20in%3D%22n%22%20result%3D%22t%22%20values%3D%220.12%200%200%200%200.62%20%200.08%200%200%200%200.50%20%200.04%200%200%200%200.33%20%200%200%200%200%201%22%2F%3E%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%222.2%22%20numOctaves%3D%223%22%20seed%3D%227%22%20stitchTiles%3D%22stitch%22%20result%3D%22g%22%2F%3E%3CfeColorMatrix%20in%3D%22g%22%20result%3D%22gl%22%20values%3D%220.06%200%200%200%200%20%200.04%200%200%200%200%20%200.02%200%200%200%200%20%200%200%200%200%201%22%2F%3E%3CfeBlend%20in%3D%22t%22%20in2%3D%22gl%22%20mode%3D%22multiply%22%20result%3D%22c%22%2F%3E%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%220.35%22%20numOctaves%3D%222%22%20seed%3D%2212%22%20stitchTiles%3D%22stitch%22%20result%3D%22h%22%2F%3E%3CfeColorMatrix%20in%3D%22h%22%20result%3D%22s%22%20values%3D%220.06%200%200%200%200%20%200.05%200%200%200%200%20%200.03%200%200%200%200%20%200%200%200%200%201%22%2F%3E%3CfeBlend%20in%3D%22c%22%20in2%3D%22s%22%20mode%3D%22screen%22%20result%3D%22ws%22%2F%3E%3CfeComponentTransfer%20in%3D%22ws%22%3E%3CfeFuncR%20type%3D%22linear%22%20slope%3D%221.0%22%20intercept%3D%220.10%22%2F%3E%3CfeFuncG%20type%3D%22linear%22%20slope%3D%220.9%22%20intercept%3D%220.06%22%2F%3E%3CfeFuncB%20type%3D%22linear%22%20slope%3D%220.75%22%20intercept%3D%220.03%22%2F%3E%3C%2FfeComponentTransfer%3E%3C%2Ffilter%3E%3Crect%20width%3D%22300%22%20height%3D%22300%22%20fill%3D%22%23C9A87C%22%2F%3E%3Crect%20width%3D%22300%22%20height%3D%22300%22%20filter%3D%22url%28%23f%29%22%2F%3E%3C%2Fsvg%3E") #C9A87C;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
     }
 
     /* Focus ring utility */
@@ -182,88 +180,6 @@
   </style>
 </head>
 <body class="bg-bg font-body text-text antialiased">
-
-  <!-- Hidden SVG leather texture patterns -->
-  <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" aria-hidden="true" style="position:absolute">
-    <defs>
-      <!--
-        Dark leather filter
-        Layer 1: fractalNoise at 0.65 freq — broad pore structure
-        Layer 2: fractalNoise at 2.0 freq — fine grain overlay
-        Layer 3: highlight — subtle top-light sheen
-      -->
-      <filter id="leather-filter" x="0" y="0" width="100%" height="100%">
-        <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="4" seed="2" stitchTiles="stitch" result="noise"/>
-        <feColorMatrix type="matrix" in="noise" result="tinted"
-          values="0.15 0 0 0 0.22
-                  0.08 0 0 0 0.11
-                  0.03 0 0 0 0.04
-                  0   0 0 0 1"/>
-        <feTurbulence type="fractalNoise" baseFrequency="2.0" numOctaves="3" seed="7" stitchTiles="stitch" result="grain"/>
-        <feColorMatrix type="matrix" in="grain" result="grain-dark"
-          values="0.06 0 0 0 0
-                  0.03 0 0 0 0
-                  0.01 0 0 0 0
-                  0    0 0 0 1"/>
-        <feBlend in="tinted" in2="grain-dark" mode="multiply" result="combined"/>
-        <!-- Subtle highlight for tactile sheen -->
-        <feTurbulence type="fractalNoise" baseFrequency="0.4" numOctaves="2" seed="12" stitchTiles="stitch" result="highlight"/>
-        <feColorMatrix type="matrix" in="highlight" result="sheen"
-          values="0.04 0 0 0 0
-                  0.03 0 0 0 0
-                  0.01 0 0 0 0
-                  0    0 0 0 1"/>
-        <feBlend in="combined" in2="sheen" mode="screen" result="with-sheen"/>
-        <feComponentTransfer in="with-sheen">
-          <feFuncR type="linear" slope="1.3" intercept="0.05"/>
-          <feFuncG type="linear" slope="1.1" intercept="0.02"/>
-          <feFuncB type="linear" slope="0.9" intercept="0"/>
-        </feComponentTransfer>
-      </filter>
-      <!--
-        Light leather filter (for dark backgrounds)
-        Same 3-layer approach with lighter base tones
-      -->
-      <filter id="leather-filter-light" x="0" y="0" width="100%" height="100%">
-        <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="4" seed="2" stitchTiles="stitch" result="noise"/>
-        <feColorMatrix type="matrix" in="noise" result="tinted"
-          values="0.15 0 0 0 0.65
-                  0.10 0 0 0 0.52
-                  0.05 0 0 0 0.35
-                  0    0 0 0 1"/>
-        <feTurbulence type="fractalNoise" baseFrequency="2.0" numOctaves="3" seed="7" stitchTiles="stitch" result="grain"/>
-        <feColorMatrix type="matrix" in="grain" result="grain-light"
-          values="0.08 0 0 0 0
-                  0.05 0 0 0 0
-                  0.02 0 0 0 0
-                  0    0 0 0 1"/>
-        <feBlend in="tinted" in2="grain-light" mode="multiply" result="combined"/>
-        <!-- Subtle highlight for tactile sheen -->
-        <feTurbulence type="fractalNoise" baseFrequency="0.4" numOctaves="2" seed="12" stitchTiles="stitch" result="highlight"/>
-        <feColorMatrix type="matrix" in="highlight" result="sheen"
-          values="0.06 0 0 0 0
-                  0.04 0 0 0 0
-                  0.02 0 0 0 0
-                  0    0 0 0 1"/>
-        <feBlend in="combined" in2="sheen" mode="screen" result="with-sheen"/>
-        <feComponentTransfer in="with-sheen">
-          <feFuncR type="linear" slope="1.0" intercept="0.12"/>
-          <feFuncG type="linear" slope="0.9" intercept="0.08"/>
-          <feFuncB type="linear" slope="0.7" intercept="0.04"/>
-        </feComponentTransfer>
-      </filter>
-      <!-- Dark leather pattern tile (150x150 for visible grain at nav size) -->
-      <pattern id="leather-pattern" patternUnits="userSpaceOnUse" width="150" height="150">
-        <rect width="150" height="150" fill="#3B1F0B"/>
-        <rect width="150" height="150" filter="url(#leather-filter)"/>
-      </pattern>
-      <!-- Light leather pattern tile -->
-      <pattern id="leather-pattern-light" patternUnits="userSpaceOnUse" width="150" height="150">
-        <rect width="150" height="150" fill="#C9A87C"/>
-        <rect width="150" height="150" filter="url(#leather-filter-light)"/>
-      </pattern>
-    </defs>
-  </svg>
 
   <a href="#projects" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[60] focus:px-4 focus:py-2 focus:bg-primary focus:text-white focus:rounded-lg focus:outline-2 focus:outline-primary focus:outline-offset-2">
     Skip to main content

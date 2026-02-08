@@ -1,8 +1,8 @@
-# Trident Fox Website - Design Reasoning
+# Amber Rook Website - Design Reasoning
 
 ## Overview
 
-This document captures the design decisions and reasoning behind the Trident Fox company website, based on research using the UI/UX Pro Max design intelligence system.
+This document captures the design decisions and reasoning behind the Amber Rook company website, based on research using the UI/UX Pro Max design intelligence system.
 
 ---
 
@@ -11,7 +11,7 @@ This document captures the design decisions and reasoning behind the Trident Fox
 ### Style: Soft UI Evolution (Light Theme)
 **Why**: UI/UX Pro Max recommended Soft UI Evolution for modern SaaS platforms — improved contrast over neumorphism, subtle depth, and WCAG AA+ accessibility. This matches the requirements for a light, inviting, startup-oriented design that isn't corporate.
 
-### Brand Identity: Trident Fox
+### Brand Identity: Amber Rook
 **Connotations**: "Trident" = precision, power, three-pronged strength. "Fox" = agility, cleverness, adaptability.
 
 The visual identity translates these into:
@@ -74,7 +74,7 @@ Projects are the main focus; founders are secondary. Achieved through deliberate
 ### Hero Section Design
 - **Gradient blobs**: Organic shapes with blur create depth and visual richness without images
 - **Badge pill**: Small pill above heading adds detail and establishes brand voice
-- **Gradient text**: The indigo-to-coral gradient on "Trident Fox" is the visual signature
+- **Gradient text**: The indigo-to-coral gradient on "Amber Rook" is the visual signature
 - **Dual CTAs**: Primary (coral) for projects, secondary (white card) for contact — clear hierarchy
 
 ### CSS Initials Avatars
