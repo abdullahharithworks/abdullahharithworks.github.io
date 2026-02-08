@@ -1,13 +1,13 @@
-title: AGN Technology
-description: "Custom software solutions and SaaS products"
+title: Flux Dynamics
+description: "Software that moves with your ambition"
 url: "https://abdullahharithworks.github.io"
 baseurl: ""
 
 markdown: kramdown
 
 # Company-specific variables
-company_name: "AGN Technology"
-company_tagline: "We build custom software solutions and SaaS products that drive your business forward."
-company_email: "hello@agntechnology.com"
-company_github: "https://github.com/agntechnology"
-company_linkedin: "https://linkedin.com/company/agntechnology"
+company_name: "Flux Dynamics"
+company_tagline: "We craft software that adapts, scales, and propels your ideas into motion."
+company_email: "hello@fluxdynamics.com"
+company_github: "https://github.com/fluxdynamics"
+company_linkedin: "https://linkedin.com/company/fluxdynamics"

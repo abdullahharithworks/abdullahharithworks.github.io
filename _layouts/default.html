@@ -19,22 +19,51 @@
       --font-heading: "Space Grotesk", sans-serif;
       --font-body: "DM Sans", sans-serif;
 
-      --color-primary: #0F766E;
-      --color-primary-light: #14B8A6;
-      --color-primary-dark: #0D5C56;
-      --color-cta: #0369A1;
-      --color-cta-hover: #0284C7;
-      --color-bg: #FFFFFF;
-      --color-bg-alt: #F0FDFA;
+      /* Indigo-violet primary — energy & dynamics */
+      --color-primary: #6366F1;
+      --color-primary-light: #818CF8;
+      --color-primary-dark: #4F46E5;
+      --color-primary-soft: #EEF2FF;
+
+      /* Warm coral accent — flux & warmth */
+      --color-accent: #F97316;
+      --color-accent-light: #FB923C;
+      --color-accent-dark: #EA580C;
+
+      /* CTA uses the coral for energy */
+      --color-cta: #F97316;
+      --color-cta-hover: #EA580C;
+
+      /* Light, warm backgrounds */
+      --color-bg: #FAFAFA;
+      --color-bg-alt: #F1F0FB;
       --color-bg-card: #FFFFFF;
-      --color-text: #134E4A;
-      --color-text-light: #5F7A77;
-      --color-text-heading: #042F2E;
-      --color-border: #CCFBF1;
-      --color-tag-bg: #F0FDFA;
-      --color-tag-text: #0F766E;
-      --color-footer-bg: #042F2E;
-      --color-footer-text: #99F6E4;
+      --color-bg-hero: #F5F3FF;
+
+      /* Readable dark text */
+      --color-text: #374151;
+      --color-text-light: #6B7280;
+      --color-text-heading: #111827;
+
+      /* Subtle borders */
+      --color-border: #E5E7EB;
+      --color-border-hover: #C7D2FE;
+
+      /* Tags */
+      --color-tag-bg: #EEF2FF;
+      --color-tag-text: #4F46E5;
+
+      /* Footer */
+      --color-footer-bg: #1E1B4B;
+      --color-footer-text: #C7D2FE;
+
+      /* Stats band */
+      --color-stats-bg: #4F46E5;
+
+      /* Founder avatar colors */
+      --color-avatar-1: #6366F1;
+      --color-avatar-2: #F97316;
+      --color-avatar-3: #06B6D4;
     }
 
     html {
@@ -47,6 +76,13 @@
       html {
         scroll-behavior: auto;
       }
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
       .animate-on-scroll {
         opacity: 1 !important;
         transform: none !important;
@@ -54,28 +90,66 @@
       }
     }
 
+    /* Scroll-triggered animations */
     .animate-on-scroll {
       opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease-out, transform 0.5s ease-out;
     }
     .animate-on-scroll.is-visible {
       opacity: 1;
       transform: translateY(0);
     }
 
+    /* Stagger children */
     .stagger-children > .animate-on-scroll:nth-child(1) { transition-delay: 0ms; }
-    .stagger-children > .animate-on-scroll:nth-child(2) { transition-delay: 100ms; }
-    .stagger-children > .animate-on-scroll:nth-child(3) { transition-delay: 200ms; }
-    .stagger-children > .animate-on-scroll:nth-child(4) { transition-delay: 300ms; }
-    .stagger-children > .animate-on-scroll:nth-child(5) { transition-delay: 400ms; }
-    .stagger-children > .animate-on-scroll:nth-child(6) { transition-delay: 500ms; }
-    .stagger-children > .animate-on-scroll:nth-child(7) { transition-delay: 600ms; }
+    .stagger-children > .animate-on-scroll:nth-child(2) { transition-delay: 80ms; }
+    .stagger-children > .animate-on-scroll:nth-child(3) { transition-delay: 160ms; }
+    .stagger-children > .animate-on-scroll:nth-child(4) { transition-delay: 240ms; }
+    .stagger-children > .animate-on-scroll:nth-child(5) { transition-delay: 320ms; }
+    .stagger-children > .animate-on-scroll:nth-child(6) { transition-delay: 400ms; }
+    .stagger-children > .animate-on-scroll:nth-child(7) { transition-delay: 480ms; }
+
+    /* Decorative gradient blobs */
+    .blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.4;
+      pointer-events: none;
+    }
+
+    /* Card hover lift */
+    .card-hover {
+      transition: transform 0.25s ease-out, box-shadow 0.25s ease-out, border-color 0.25s ease-out;
+    }
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px -8px rgba(99, 102, 241, 0.15);
+    }
+
+    /* Smooth gradient text */
+    .gradient-text {
+      background: linear-gradient(135deg, #6366F1 0%, #F97316 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Focus ring utility */
+    .focus-ring {
+      outline: none;
+    }
+    .focus-ring:focus-visible {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+      border-radius: 4px;
+    }
   </style>
 </head>
 <body class="bg-bg font-body text-text antialiased">
 
-  <a href="#projects" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[60] focus:px-4 focus:py-2 focus:bg-cta focus:text-white focus:rounded-lg focus:outline-2 focus:outline-cta focus:outline-offset-2">
+  <a href="#projects" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[60] focus:px-4 focus:py-2 focus:bg-primary focus:text-white focus:rounded-lg focus:outline-2 focus:outline-primary focus:outline-offset-2">
     Skip to main content
   </a>
 

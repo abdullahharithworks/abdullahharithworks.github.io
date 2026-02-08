@@ -1,7 +1,13 @@
-<footer class="py-8 bg-footer-bg text-center">
+<footer class="py-10 bg-footer-bg">
   <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
-    <p class="text-sm text-footer-text">
-      &copy; {{ 'now' | date: '%Y' }} {{ site.company_name }}. All rights reserved.
-    </p>
+    <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-primary text-white text-xs font-bold">F</span>
+        <span class="font-heading font-semibold text-white">{{ site.company_name }}</span>
+      </div>
+      <p class="text-sm text-footer-text">
+        &copy; {{ 'now' | date: '%Y' }} {{ site.company_name }}. All rights reserved.
+      </p>
+    </div>
   </div>
 </footer>

@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }, {
       threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
+      rootMargin: '0px 0px -40px 0px'
     });
 
     document.querySelectorAll('.animate-on-scroll').forEach(el => {
@@ -102,9 +102,9 @@ document.addEventListener('DOMContentLoaded', () => {
   if (navbar) {
     window.addEventListener('scroll', () => {
       if (window.scrollY > 10) {
-        navbar.classList.add('shadow-sm');
+        navbar.classList.add('shadow-md');
       } else {
-        navbar.classList.remove('shadow-sm');
+        navbar.classList.remove('shadow-md');
       }
     }, { passive: true });
   }
