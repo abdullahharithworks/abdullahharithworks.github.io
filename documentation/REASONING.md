@@ -1,8 +1,8 @@
-# Flux Dynamics Website - Design Reasoning
+# Trident Fox Website - Design Reasoning
 
 ## Overview
 
-This document captures the design decisions and reasoning behind the Flux Dynamics company website, based on research using the UI/UX Pro Max design intelligence system.
+This document captures the design decisions and reasoning behind the Trident Fox company website, based on research using the UI/UX Pro Max design intelligence system.
 
 ---
 
@@ -11,14 +11,14 @@ This document captures the design decisions and reasoning behind the Flux Dynami
 ### Style: Soft UI Evolution (Light Theme)
 **Why**: UI/UX Pro Max recommended Soft UI Evolution for modern SaaS platforms — improved contrast over neumorphism, subtle depth, and WCAG AA+ accessibility. This matches the requirements for a light, inviting, startup-oriented design that isn't corporate.
 
-### Brand Identity: Flux Dynamics
-**Connotations**: "Flux" = flow, change, transformation. "Dynamics" = energy, motion, force.
+### Brand Identity: Trident Fox
+**Connotations**: "Trident" = precision, power, three-pronged strength. "Fox" = agility, cleverness, adaptability.
 
 The visual identity translates these into:
 - **Indigo-violet primary** (`#6366F1`) — energy, innovation, depth
-- **Warm coral accent** (`#F97316`) — flux, warmth, action
-- **Gradient text** (indigo → coral) — visual representation of transformation
-- **Decorative blobs** — organic, flowing shapes reinforcing "flux"
+- **Warm coral accent** (`#F97316`) — warmth, action, fox-like vibrancy
+- **Leather texture text** — premium, tactile quality on logo and hero heading
+- **Decorative blobs** — organic, flowing shapes reinforcing agility
 - **Rounded corners** (2xl / xl) — approachable, modern, not rigid
 
 ### Typography: Space Grotesk / DM Sans
@@ -74,7 +74,7 @@ Projects are the main focus; founders are secondary. Achieved through deliberate
 ### Hero Section Design
 - **Gradient blobs**: Organic shapes with blur create depth and visual richness without images
 - **Badge pill**: Small pill above heading adds detail and establishes brand voice
-- **Gradient text**: The indigo-to-coral gradient on "Flux Dynamics" is the visual signature
+- **Gradient text**: The indigo-to-coral gradient on "Trident Fox" is the visual signature
 - **Dual CTAs**: Primary (coral) for projects, secondary (white card) for contact — clear hierarchy
 
 ### CSS Initials Avatars
