@@ -11,33 +11,18 @@
       Software that moves with your ambition
     </div>
 
-    <!-- Effect comparison: 4 emerald stone text treatments -->
-    <p class="text-sm text-text-light mb-1 animate-on-scroll">1. Gemstone Gradient + Gloss</p>
-    <h1 class="font-heading font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-text-heading tracking-tight mb-8 animate-on-scroll">
-      We are <span class="emerald-gradient">{{ site.company_name }}</span>
-    </h1>
-
-    <p class="text-sm text-text-light mb-1 animate-on-scroll">2. Faceted Shadows</p>
-    <h1 class="font-heading font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-text-heading tracking-tight mb-8 animate-on-scroll">
-      We are <span class="emerald-facets">{{ site.company_name }}</span>
-    </h1>
-
-    <p class="text-sm text-text-light mb-1 animate-on-scroll">3. Shimmer Sweep</p>
-    <h1 class="font-heading font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-text-heading tracking-tight mb-8 animate-on-scroll">
-      We are <span class="emerald-shimmer">{{ site.company_name }}</span>
-    </h1>
-
-    <p class="text-sm text-text-light mb-1 animate-on-scroll">4. SVG Filter (Turbulence + Specular)</p>
     <h1 class="font-heading font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-text-heading tracking-tight animate-on-scroll">
       We are <span class="emerald-svg-filter">{{ site.company_name }}</span>
     </h1>
 
-    <!-- Inline SVG filter for effect #4 -->
+    <!-- Inline SVG filter: turbulence + specular with animated shimmer sweep -->
     <svg width="0" height="0" aria-hidden="true" style="position:absolute">
       <filter id="emerald-stone-filter">
         <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="4" seed="2" result="noise" />
         <feSpecularLighting in="noise" surfaceScale="6" specularConstant="1.2" specularExponent="20" lighting-color="#6EE7B7" result="specular">
-          <fePointLight x="-100" y="-200" z="300" />
+          <fePointLight x="-200" y="-200" z="300">
+            <animate attributeName="x" values="-200;600;-200" dur="3s" repeatCount="indefinite" />
+          </fePointLight>
         </feSpecularLighting>
         <feComposite in="specular" in2="SourceAlpha" operator="in" result="lit" />
         <feComposite in="SourceGraphic" in2="lit" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" />
