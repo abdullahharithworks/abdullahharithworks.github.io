@@ -1,0 +1,16 @@
+<section id="stats" class="py-16 md:py-20 bg-primary">
+  <div class="max-w-5xl mx-auto px-4 md:px-6 lg:px-8">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 text-center stagger-children">
+      {% for stat in site.data.stats %}
+      <div class="animate-on-scroll">
+        <div class="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white">
+          <span class="counter" data-target="{{ stat.value }}">0</span>{{ stat.suffix }}
+        </div>
+        <p class="mt-2 text-sm md:text-base font-medium text-white/80">
+          {{ stat.label }}
+        </p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

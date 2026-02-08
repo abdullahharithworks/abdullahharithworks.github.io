@@ -1,8 +1,13 @@
-title: Abdullah Harith
-description: Personal projects and portfolio
+title: AGN Technology
+description: "Custom software solutions and SaaS products"
 url: "https://abdullahharithworks.github.io"
 baseurl: ""
 
-theme: jekyll-theme-cayman
-
 markdown: kramdown
+
+# Company-specific variables
+company_name: "AGN Technology"
+company_tagline: "We build custom software solutions and SaaS products that drive your business forward."
+company_email: "hello@agntechnology.com"
+company_github: "https://github.com/agntechnology"
+company_linkedin: "https://linkedin.com/company/agntechnology"
