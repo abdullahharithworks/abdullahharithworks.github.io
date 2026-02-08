@@ -1,4 +1,4 @@
-title: Amber Rook
+title: Emerald Rook
 description: "Software that moves with your ambition"
 url: "https://abdullahharithworks.github.io"
 baseurl: ""
@@ -6,8 +6,8 @@ baseurl: ""
 markdown: kramdown
 
 # Company-specific variables
-company_name: "Amber Rook"
+company_name: "Emerald Rook"
 company_tagline: "We craft software that adapts, scales, and propels your ideas into motion."
-company_email: "hello@amberrook.com"
-company_github: "https://github.com/amberrook"
-company_linkedin: "https://linkedin.com/company/amberrook"
+company_email: "hello@emeraldrook.com"
+company_github: "https://github.com/emeraldrook"
+company_linkedin: "https://linkedin.com/company/emeraldrook"
